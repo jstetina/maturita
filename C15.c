@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-	printf("zadejte radu cisel: ");
+	printf("zadejte radu cisel s mezeram (ukonceno nulou): ");
 	
 	int vstup;
 	int soucet = 0;
