@@ -13,7 +13,7 @@ int max (int hodnoty[]){
 
 
 int main(){
-    int pocet_cisel = 3;
+    const int pocet_cisel = 3;
     int hodnoty [pocet_cisel];
 
     printf("NEJVETSI HODNOTA ZE 3 CISEL \n");
