@@ -1,44 +1,40 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int *PREVED_VEKTOR(int vektor_puvodni[], int size){
-    static int vysledny_vektor [5];
-    // 0 --> [0] + [9]
-    // 1 --> [1] + [8]
-    // ...
-    for(int i = 0; i < 5;i++){
-        vysledny_vektor[i] = vektor_puvodni[i] + vektor_puvodni[9-i];
-    }
-    return vysledny_vektor;
-}
-
-void VYPIS_VEKTOR(int vektor [], int size){
-    printf("vektor = {");
-    for(int i = 0; i < size;i++){
+void VYPIS_PRVKY_VEKTORU(int vektor[],int velikost_vektoru){
+    printf("prvky vektoru = {");
+    for(int i = 0; i < velikost_vektoru;i++){
         printf("%i,",vektor[i]);
     }
     printf("%c",8); //backspace
     printf("} \n\n");
 }
 
+void PREVED_VEKTOR(int puvodni_vektor [], int velikost_pv, int * novy_vektor, int velikost_nv){
+    for(int i = 0; i < velikost_nv; i++){
+        novy_vektor[i] = puvodni_vektor[i] + puvodni_vektor[velikost_pv-1-i];
+    }
+    return;
+}
+
+
 int main(){
     int vektor [10];
     int velikost_vektoru = (int)(sizeof(vektor)/sizeof(int));
+
+    int novy_vektor [5];
+    int velikost_noveho_vektoru = (int)(sizeof(novy_vektor)/sizeof(int));
+
 
     printf("Zadejte prvky u %i prvkoveho vektoru\n",velikost_vektoru);
     for(int i = 0; i < velikost_vektoru; i++){
         printf("%i. prvek: ",i+1);
         scanf("%i",&vektor[i]);
     }
-    printf("\n");
-    
-    VYPIS_VEKTOR(vektor,velikost_vektoru);
 
-    int novy_vektor [5];
-    int * novy_vektor_ptr = novy_vektor;
-    novy_vektor_ptr = PREVED_VEKTOR(vektor,velikost_vektoru);
-    int novy_vektor_velikost = (int)(sizeof(novy_vektor)/sizeof(int));
-    printf("%i",novy_vektor_velikost);
-    VYPIS_VEKTOR(novy_vektor,novy_vektor_velikost);
+    VYPIS_PRVKY_VEKTORU(vektor, velikost_vektoru);
+    PREVED_VEKTOR(vektor,velikost_vektoru,novy_vektor,velikost_noveho_vektoru);
+    VYPIS_PRVKY_VEKTORU(novy_vektor,velikost_noveho_vektoru);
 
     return 0;
 }
