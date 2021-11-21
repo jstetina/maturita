@@ -18,8 +18,6 @@ bool KOLMOST(int a [], int b []){
  
 }
 
-
-
 int main(){
     int a [4];
     int b [4];
