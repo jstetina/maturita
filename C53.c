@@ -10,7 +10,6 @@ struct Komplexni_cislo SOUCET_CISEL(struct Komplexni_cislo kc1, struct Komplexni
 
     soucet.realna_slozka = kc1.realna_slozka + kc2.realna_slozka;
     soucet.imaginarni_slozka = kc1.imaginarni_slozka + kc2.imaginarni_slozka;
-
     
     return soucet;
 
