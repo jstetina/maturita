@@ -29,12 +29,23 @@ void BUBBLE_SORT(int * pole,int velikost_pole){
 
 
 int main(){
-    int pole [] = {2,25,3,9,2,74,2,5,41,6};
-    int velikost_pole = (int)(sizeof(pole)/sizeof(int));
+    int n;
 
-    VYPIS_POLE(pole,velikost_pole);
-    BUBBLE_SORT(pole,velikost_pole);
-    VYPIS_POLE(pole, velikost_pole);
+    printf("Serazeni pole pomoci BubbleSort\n");
+    printf("Zadejte cislo n(pocet prvku): ");
+    scanf("%d",&n);
+
+    int pole[n];
+
+    for(int i = 0; i < n; i++){
+        printf("zadejte %i. prvek: ",i+1);
+        scanf("%d",&pole[i]);
+    }
+
+
+    VYPIS_POLE(pole,n);
+    BUBBLE_SORT(pole,n);
+    VYPIS_POLE(pole, n);
     
     return 0;
 }
