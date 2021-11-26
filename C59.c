@@ -47,7 +47,7 @@ int quicksort(int pole[],int low, int high){
 int main(){
     int n;
 
-    printf("Serazeni pole pomoci BubbleSort\n");
+    printf("Serazeni pole pomoci Quick Sortu\n");
     printf("Zadejte cislo n(pocet prvku): ");
     scanf("%d",&n);
 
