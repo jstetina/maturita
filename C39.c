@@ -1,21 +1,18 @@
+//C39
 #include <stdio.h>
 #include <stdbool.h>
 
 bool KOLMOST(int a [], int b []){
-    int soucin_a = 1;
-    int soucin_b = 1;
+    int soucin = 0;
     for(int i = 0; i < 4; i++){
-        soucin_a *= a[i];
-        soucin_b *= b[i];
+        soucin += a[i] * b[i];
     }
-    if(soucin_a + soucin_b == 0){
+    if(soucin == 0){
         return true;
     }
     else{
         return false;
-    }
-
- 
+    } 
 }
 
 int main(){
