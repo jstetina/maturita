@@ -16,7 +16,7 @@ struct zamestnanec nejvyssi_plat(struct zamestnanec zamestnanci [], int pocet_za
     nejvyssi_plat.plat = zamestnanci[max_index].plat;
 
     return nejvyssi_plat;
-}
+    }
 
 
 int main(){
