@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 //rovnostranny, rovnoramenny, obecny
 bool rovnostranny(int a,int b,int c){

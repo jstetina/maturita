@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 
 int najdi_preponu (int hodnoty[]){
     size_t values_size = sizeof(hodnoty) / sizeof(hodnoty[0]);

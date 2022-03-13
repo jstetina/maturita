@@ -2,8 +2,6 @@ import os
 import re
 
 for file in os.listdir():
-    if re.findall("C\d{2}.c",file):
-        print(file,end=" -> ")
-        new_file = "C0" + file[1:]
+    if re.findall("C\d{3}.c",file):
+        new_file = "C" + file[2:]
         print(new_file)
-        os.rename(file,new_file)
