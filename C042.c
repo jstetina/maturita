@@ -15,12 +15,12 @@ int main(){
 
     printf("Porovnavani dvou retezcu \n");
     printf("1. retezec - ");
-    scanf("%[^\n]s",string1);    
+    scanf("%s",string1);    
     //fgets(string1,maximalni_delka,stdin);
     puts(string1);
 
     printf("2.retezec - ");
-    scanf("%[^\n]s",string2);  
+    scanf("%s",string2);  
     //fgets(string2,maximalni_delka,stdin);
     puts(string2);
     if(stejne_retezce(string1,string2)){
@@ -45,7 +45,6 @@ int delka(char string []){
 
 bool stejne_retezce(char string1 [],char string2 []){
     for(int i = 0; i < 20; i++){
-        printf("DEBUG: %c == %c",string1[i],string2[i]);
         if(string1[i] != string2[i]){
             return false;
         }
