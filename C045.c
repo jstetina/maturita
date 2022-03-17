@@ -18,7 +18,6 @@ int main(){
     int numbers = 0;
     int other = 0;
     while(string[i] != 0){
-        printf("%i",string[i]);
         char c = UPPERtoLOWER(string[i]); //convert uppercase to lowercase
         printf("%i",c);
         switch (c){
