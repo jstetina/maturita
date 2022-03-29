@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Student
-{
+typedef struct{
     int id;
     char jmeno [20];
     float vyska;
-};
+}Student;
 
-int NAJDI_NEJVYSSIHO(struct Student studenti[],int pocet_studentu){
+int NAJDI_NEJVYSSIHO(Student studenti[],int pocet_studentu){
     float nejvyssi_vyska = 0.0;
     int index_nejvyssiho;
     int i = 0;
@@ -24,7 +23,7 @@ int NAJDI_NEJVYSSIHO(struct Student studenti[],int pocet_studentu){
 int main(){
     int pocet_studentu = 3;
 
-    struct Student studenti[pocet_studentu];
+    Student studenti[pocet_studentu];
 
     for(int i = 0; i < pocet_studentu; i++){
         studenti[i].id = i+1;
@@ -37,6 +36,6 @@ int main(){
 
     int nejvyssi_student_index = NAJDI_NEJVYSSIHO(studenti,pocet_studentu);
 
-    printf("Nejvyssi student je %s a je vysoky %.2f m",studenti[nejvyssi_student_index].jmeno,studenti[nejvyssi_student_index].vyska);
+    printf("Nejvyssi student (id=%i) je %s a je vysoky %.2f m",studenti[nejvyssi_student_index].id,studenti[nejvyssi_student_index].jmeno,studenti[nejvyssi_student_index].vyska);
     return 0;  
 }

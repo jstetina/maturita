@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-struct Komplexni_cislo{
+typedef struct{
     int realna_slozka;
     int imaginarni_slozka;
-};
+}Komplexni_cislo;
 
-struct Komplexni_cislo SOUCET_CISEL(struct Komplexni_cislo kc1, struct Komplexni_cislo kc2){
-    struct Komplexni_cislo soucet;
+Komplexni_cislo SOUCET_CISEL(Komplexni_cislo kc1, Komplexni_cislo kc2){
+    Komplexni_cislo soucet;
 
     soucet.realna_slozka = kc1.realna_slozka + kc2.realna_slozka;
     soucet.imaginarni_slozka = kc1.imaginarni_slozka + kc2.imaginarni_slozka;
@@ -15,11 +15,10 @@ struct Komplexni_cislo SOUCET_CISEL(struct Komplexni_cislo kc1, struct Komplexni
 
 }
 
-
 int main(){
-    struct Komplexni_cislo kc1;
-    struct Komplexni_cislo kc2;
-    struct Komplexni_cislo soucet;
+    Komplexni_cislo kc1;
+    Komplexni_cislo kc2;
+    Komplexni_cislo soucet;
 
     printf("Soucet komplexnich cisel \n");
 
