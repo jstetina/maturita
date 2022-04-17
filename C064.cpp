@@ -20,14 +20,13 @@ class Vozidlo{
 
 };
 
-
 int main(){
     Vozidlo trabant(4,100);
     Vozidlo ferrari(4,200);
     Vozidlo bicykl(2,30);
 
-    printf("Trabant ma %d kol a dosahne rychlosti %.2f km/h \n",trabant.getPocetKol(),trabant.getMaxRychlost());
-    printf("Ferrarri ma %d kol a dosahne rychlosti %.2f km/h \n",ferrari.getPocetKol(),ferrari.getMaxRychlost());
-    printf("Bicykl ma %d kol a dosahne rychlosti %.2f km/h \n",bicykl.getPocetKol(),bicykl.getMaxRychlost());
+    cout << "Trabant ma " << trabant.getPocetKol() << "kola a dosahne rychlosti " << trabant.getMaxRychlost() <<  "km/h \n";
+    cout << "Ferrari ma " << ferrari.getPocetKol() << "kola a dosahne rychlosti " << ferrari.getMaxRychlost() <<  "km/h \n";
+    cout << "Bicykl ma " << bicykl.getPocetKol() << "kola a dosahne rychlosti " << bicykl.getMaxRychlost() <<  "km/h \n";
     return 0;
 }
